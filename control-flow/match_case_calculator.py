@@ -2,7 +2,7 @@ num1 = input("Enter the first number: ")
 num2 = input("Enter the second number: ")
 operation = input("Choose the operation (+, -, *, /):.")
 
-match operation_type:
+match operation:
     case "+":
         result = float(num1) + float(num2)
         print(f"The result is: {result}")
