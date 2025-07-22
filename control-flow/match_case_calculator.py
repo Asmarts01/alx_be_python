@@ -1,6 +1,6 @@
 num1 = input("Enter the first number: ")
 num2 = input("Enter the second number: ")
-operation_type = input("Choose the operation (+, -, *, /):.")
+operation = input("Choose the operation (+, -, *, /):.")
 
 match operation_type:
     case "+":
