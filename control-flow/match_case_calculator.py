@@ -4,19 +4,15 @@ operation = input("Choose the operation (+, -, *, /):.")
 
 match operation:
     case "+":
-        result = float(num1) + float(num2)
-        print(f"The result is: {result}")
+        print(f"{num1} + {num2} = {num1 + num2}")
     case "-":
-        result = float(num1) - float(num2)
-        print(f"The result is: {result}")
+        print(f"{num1} - {num2} = {num1 - num2}")
     case "*":
-        result = float(num1) * float(num2)
-        print(f"The result is: {result}")
+        print(f"{num1} * {num2} = {num1 * num2}")
     case "/":
         if num2 == 0:
-            print("MATH ERROR")
+            print("Error: Cannot divide by zero.")
         else:
-            result = float(num1) / float(num2)
-            print(f"The result is: {result}")
-    case _: 
-        print("invalid operation")
+            print(f"{num1} / {num2} = {num1 / num2}")
+    case _:
+        print("Invalid operation. Choose one of +, -, *, /.")
