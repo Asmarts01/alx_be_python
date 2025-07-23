@@ -1,8 +1,8 @@
 Task = input ("Enter your task: ")
 # This program sets a daily reminder based on user input.
 Time_bound = input("Is this task time-bound? (yes/no): ").strip().lower()
-priority = input("Enter the priority (high/medium/low): ").strip().lower()
-match priority:
+Priority = input("Enter the priority (high/medium/low): ").strip().lower()
+match Priority:
     case "high":
         print(f"Reminder set for high priority task: {Task}")
         if Time_bound == "yes":
