@@ -11,21 +11,21 @@ def perform_operation(num1, num2, operation):
     Returns:
     float: The result of the arithmetic operation.
     """
-    match operation:
-        case 'add':
-            return num1 + num2
-        case 'subtract':
-            return num1 - num2
-        case 'multiply':
-            return num1 * num2
-        case 'divide':
-            if num2 == 0:
-                raise ValueError("Cannot divide by zero.")
-            return num1 / num2
-        case _:
-            raise ValueError(f"Unknown operation: {operation}")
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    elif operation == 'multiply':
+        return num1 * num2
+    elif operation == 'divide':
+        if num2 == 0:
+            raise ValueError("Cannot divide by zero.")
+        return num1 / num2
+    else:
+        raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+# Main script to use the arithmetic operations module
 
-from unittest import result
+
 from arithmetic_operations import perform_operation
 def main():
     print("Arithmetic Operations:")
