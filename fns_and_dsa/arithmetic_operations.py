@@ -1,29 +1,39 @@
 #Arithmetic operations
 def perform_operation(num1, num2, operation):
+    """
+    Perform arithmetic operations on two numbers based on the specified operation.
+
+    Parameters:
+    num1 (float): The first number.
+    num2 (float): The second number.
+    operation (str): The operation to perform ('add', 'subtract', 'multiply', 'divide').
+
+    Returns:
+    float: The result of the arithmetic operation.
+    """
     match operation:
-        case '+':
+        case 'add':
             return num1 + num2
-        case '-':
+        case 'subtract':
             return num1 - num2
-        case '*':
+        case 'multiply':
             return num1 * num2
-        case '/':
+        case 'divide':
             if num2 == 0:
-                raise ZeroDivisionError("Cannot divide by zero.")
+                raise ValueError("Cannot divide by zero.")
             return num1 / num2
         case _:
-            raise ValueError("Invalid operator. Use '+', '-', '*', or '/'.")
-        
-from arithmetic_operations import perform_operation
+            raise ValueError(f"Unknown operation: {operation}")
 
+from unittest import result
+from arithmetic_operations import perform_operation
 def main():
-    print("Arithmetic Operations")
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    operation = input("Enter the operation (+, -, *, /): ").strip().lower()
+    print("Arithmetic Operations:")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    operation = input("Enter operation (add, subtract, multiply, divide): ").strip().lower()
 
     result = perform_operation(num1, num2, operation)
     print(f"Result: {result}")
-
 if __name__ == "__main__":
     main()
