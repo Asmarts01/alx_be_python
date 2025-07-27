@@ -24,8 +24,8 @@ def convert_temperature():
     """
     Convert temperature between Celsius and Fahrenheit based on user input.
     """
-    temp_value = float(input("Enter the temperature value: "))
-    unit = input("Is this temperature in Celsius or Fahrenheit? (C/F)? ").strip().upper()
+    temp_value = float(input("Enter the temperature to convert:"))
+    unit = input("Is this temperature in Celsius or Fahrenheit? (C/F):").strip().upper()
     if unit == 'C':
         converted_temp = celsius_to_fahrenheit(temp_value)
         print(f"{temp_value}°C is {converted_temp:.2f}°F")
