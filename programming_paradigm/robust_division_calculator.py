@@ -9,7 +9,7 @@ def robust_divide(numerator, denominator):
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     except TypeError:
-        return "Error: Both numerator and denominator must be numbers."
+        return "Error: Please enter numeric values only."
 
 def safe_divide(numerator, denominator):
     """Wrapper function to handle command line arguments."""
@@ -17,7 +17,7 @@ def safe_divide(numerator, denominator):
         num = float(numerator)
         denom = float(denominator)
     except ValueError:
-        return "Error: Both numerator and denominator must be numeric values."
+        return "Error: Please enter numeric values only."
 
     return robust_divide(num, denom)
 
