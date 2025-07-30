@@ -1,6 +1,6 @@
 #Robust Division Calculator with Command Line Arguments
 
-import syse
+import sys
 def robust_divide(numerator, denominator):
     """Perform division with error handling."""
     try:
