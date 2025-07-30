@@ -7,7 +7,7 @@ def robust_divide(numerator, denominator):
         result = numerator / denominator
         return result
     except ZeroDivisionError:
-        return "Error: Division by zero is not allowed."
+        return "Error: Cannot divide by zero."
     except TypeError:
         return "Error: Both numerator and denominator must be numbers."
 
