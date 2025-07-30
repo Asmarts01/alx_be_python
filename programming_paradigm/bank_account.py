@@ -17,7 +17,7 @@ class BankAccount:
 
     def display_balance(self):
         """Print the current account balance."""
-        print(f"Current balance: ${self.account_balance:.2f}")
+        print("Current Balance: ${self.account_balance:.2f}")
 
 # main.py
 
@@ -42,7 +42,7 @@ def main():
             print("Invalid amount. Please enter a numeric value.")
             sys.exit(1)
     else:
-        command = command_input
+        command = command_input.lower()
         amount = None
 
     if command == "deposit" and amount is not None:
