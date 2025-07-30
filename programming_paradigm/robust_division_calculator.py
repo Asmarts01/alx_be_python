@@ -35,4 +35,4 @@ def main():
 
     result = safe_divide(numerator, denominator)
 
-    print(f"The result of the division is: {result}")
+    print(f"The result of the division is {result}")
