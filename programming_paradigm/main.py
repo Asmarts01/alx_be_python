@@ -1,6 +1,7 @@
 # main.py
 import sys
-from robust_division_calculator import safe_divide    
+from robust_division_calculator import safe_divide   
+
 def main():    
     """Main function to handle command line arguments."""
     if len(sys.argv) != 3:
@@ -13,5 +14,6 @@ def main():
     result = safe_divide(numerator, denominator)
 
     print(f"The result of the division is {result}")
+
 if __name__ == "__main__":
     main()
