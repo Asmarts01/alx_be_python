@@ -22,13 +22,13 @@ class Book:
     
 class Library:
     def __init__(self):
-        self.books = []
+        self._books = []
 
     def add_book(self, book):
-        self.books.append(book)
+        self._books.append(book)
 
     def check_out_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 if book.checkout():
                     return f'You have checked out "{book.title}".'
@@ -37,7 +37,7 @@ class Library:
         return f'Book titled "{title}" not found in the library.'
     
     def return_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 if book.return_book():
                     return f'You have returned "{book.title}".'
